@@ -3,3 +3,740 @@
   padding: 0;
   outline: 0;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --colorPrimary: #FD3D57;
+  --colorDark: #212529;
+}
+
+/* Typography end */
+
+/* Navbar part css start */
+
+.logo h2 span {
+  color: var(--colorPrimary);
+}
+ 
+.menu ul.desktopMenu li a {
+  color: var(--colorDark);
+  transition: .2s;
+}
+
+.menu ul.desktopMenu li a.active {
+  color: var(--colorPrimary);
+}
+
+.menu ul.desktopMenu li a:hover {
+  color: var(--colorPrimary);
+}
+
+.mobileMenuTrigger div {
+  width: 32px;
+  height: 4px;
+  background: var(--colorDark);
+  margin: 6px 0;
+  border-radius: 10px;
+}
+.offcanvas-header .btn-close:focus {
+  box-shadow: none;
+}
+.offcanvas {
+  width: 340px !important;
+}
+/* Navbar part css end */
+
+/* Banner part css start */
+
+section .banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  /* padding: 100px 0; */
+  height: 100vh;
+}
+
+section .banner:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bannerText h1 {
+  color: var(--colorPrimary);
+  font-size: 50px;
+}
+.bannerText button, .ViewPropertyBtn {
+  background: var(--colorPrimary);
+  color: white;
+  padding: 8px 15px;
+  margin-top: 25px;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  border: none;
+}
+.bannerText button:hover, .ViewPropertyBtn:hover {
+  background: #c13246;
+}
+ul.slick-dots {
+  position: relative;
+  top: -60px;
+}
+.slick-slider {
+  overflow: hidden;
+}
+.slick-dots li {
+  margin: 0 2px !important;
+}
+.slick-dots li button:before {
+  content: "" !important;
+}
+.slick-dots li button {
+  background: transparent;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  border: 3px solid white !important;
+}
+
+.slick-dots li.slick-active button {
+    background: var(--colorPrimary) !important;
+    border-color: var(--colorPrimary) !important;
+}
+
+/* Banner part css end */
+
+/* Search Bar css start */
+section.searchBar {
+  padding: 60px 0;
+  overflow: hidden;
+}
+.searchBar button {
+  border: none;
+  background: var(--colorPrimary);
+  color: white;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+.searchBar button:hover {
+  background: #c13246;
+}
+.form-control:focus, .form-select:focus, .btn:focus {
+  box-shadow: none;
+  border-color: var(--colorPrimary);
+}
+
+.searchBar input, .searchBar select {
+  padding: 11px 0px 11px 10px;
+}
+
+/* Search Bar css end */
+
+/* Property type css start */
+
+section.propertyTypeSection {
+  padding: 60px 0;
+  overflow: hidden;
+  background: #f3f3f3f5;
+}
+
+.singlePropertyName {
+  box-shadow: 2px 2px 10px 0px rgba(0,0,0,.15)!important;
+  cursor: pointer;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 15px 0;
+  transition: all .3s ease;
+  background: white;
+}
+.singlePropertyName:hover {
+  transform: scale(1.05);
+}
+.singlePropertyName h2 {
+  font-size: 21px;
+  margin-bottom: 0;
+}
+.singlePropertyName .icon {
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.singlePropertyName .icon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorPrimary);
+  opacity: .15;
+  border-radius: 50%;
+  z-index: -1;
+}
+.singlePropertyName .icon i {
+  font-size: 30px;
+  color: var(--colorPrimary);
+}
+.sectionTitle h2 {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.sectionTitle h2:before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--colorDark);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Property type css end */
+
+/* Our properties part css start */
+
+.ourPropertiesList {
+  padding: 60px 0px;
+  overflow: hidden;
+}
+.propertyItem .propertyInfo .propertyType {
+  color: var(--colorPrimary);
+}
+.propertyItem .propertyImage:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .3;
+  z-index: 1;
+  display: none;
+  transition: all .5s ease;
+}
+.propertyItem .propertyImage .overlayText .overlayIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: all .5s ease;
+}
+.propertyItem:hover .propertyImage:before {
+  display: block;
+}
+.propertyItem .propertyImage .overlayText .overlayIcon ul {
+  margin-top: 77px;
+  visibility: hidden;
+}
+.propertyItem:hover .propertyImage .overlayText .overlayIcon ul {
+  transition: all .3s ease;
+  margin-top: 0;
+  visibility: visible;
+}
+.propertyItem .propertyImage img {
+  transition: all .5s ease;
+}
+.propertyItem:hover .propertyImage img {
+  transform: scale(1.1);
+}
+.propertyItem .propertyInfo h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.propertyItem .propertyInfo p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.roomStructure ul li i {
+  color: var(--colorPrimary);
+  margin-right: 5px;
+}
+.homeAuthor ul li {
+  font-size: 15px;
+}
+.propertyItem .propertyInfo h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.propertyItem .propertyInfo p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.propertyItem .propertyInfo p i {
+  color: var(--colorPrimary);
+  font-size: 16px;
+  margin-right: 2px;
+}
+.roomStructure ul li i {
+  color: var(--colorPrimary);
+  margin-right: 5px;
+}
+
+.homeAuthor ul li {
+  font-size: 15px;
+}
+
+.overlayIcon.z-1 ul {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.overlayIcon.z-1 ul li i {
+  font-size: 16px;
+  color: var(--colorPrimary);
+}
+
+.overlayIcon.z-1 ul li {
+  width: 36px;
+  height: 36px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.overlayIcon.z-1 ul li:last-child {
+  margin-right: 0;
+}
+/* Our properties part css end */
+
+/* Why choose us part css start */
+
+.whyChooseUsPart {
+  padding: 60px 0;
+  overflow: hidden;
+  background: #f3f3f3f5;
+}
+.whyChooseUsPart .chooseItem {
+  background: white;
+}
+.whyChooseUsPart .chooseItem .icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transform: rotate(45deg);
+  margin-top: 14px;
+  transition: all .6s ease;
+}
+.whyChooseUsPart .chooseItem .icon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--colorPrimary);
+  opacity: .15;
+  border-radius: 5px;
+}
+.whyChooseUsPart .chooseItem .icon i {
+  color: var(--colorPrimary);
+  font-size: 30px;
+  transform: rotate(-45deg);
+}
+
+.chooseItem {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.chooseItem:hover {
+  box-shadow: 0px 8px 16px 0px #E0E0E0;
+}
+
+.chooseItem:hover .icon {
+  transform: rotate(215deg);
+}
+.chooseItem .text {
+  margin-top: 30px;
+}
+
+.chooseItem .text h3 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.chooseItem .text p {text-align: center;line-height: 22px;font-size: 15px;margin-top: 12px;}
+.chooseItemSerial {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 50px;
+  height: 50px;
+  
+}
+
+.chooseItemSerial div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  
+}
+.chooseItemSerial div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorPrimary);
+  z-index: -1;
+  opacity: .15;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.chooseItemSerial div span {
+  transform: rotate(-45deg);
+}
+/* Why choose us part css end */
+
+/* Pupular cities part css start */
+
+.exploreCitiesPart {
+  padding: 60px 0;
+  overflow: hidden;
+}
+section.exploreCitiesPart .cityItem .name h4 {
+  font-size: 20px;
+}
+
+section.exploreCitiesPart .cityItem .name p {
+  font-size: 14px;
+}
+
+section.exploreCitiesPart .cityItem {
+  transition: all .5s ease;
+  cursor: pointer;
+}
+section.exploreCitiesPart .cityItem .image {
+  position: relative;
+  overflow: hidden;
+}
+
+section.exploreCitiesPart .cityItem .image:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .3;
+  display: none;
+  transition: all .5s ease;
+  z-index: 1;
+}
+
+section.exploreCitiesPart .cityItem:hover .image:before {
+  display: block;
+}
+section.exploreCitiesPart .cityItem .image img {
+  transition: all .5s ease;
+}
+section.exploreCitiesPart .cityItem:hover .image img {
+  transform: scale(1.1);
+}
+.citySlider > .slick-slider  {
+  padding: 0;
+}
+.citySlider > .slick-slider > .slick-list > .slick-track > .slick-slide > div {
+  margin: 0 12px;
+}
+
+.citySlider > .slick-slider > ul.slick-dots {
+  top: 4px;
+}
+.citySlider > .slick-slider > ul.slick-dots li {
+  margin: 0 6px !important;
+}
+.citySlider > .slick-slider > ul.slick-dots li button {
+  background-color: var(--colorPrimary);
+  border: none !important;
+  width:20px !important;
+  height: 5px !important;
+  border-radius: unset;
+  padding: 0;
+  opacity: .5;
+  border-radius: 5px;
+  transition: all .3s ease;
+}
+.citySlider > .slick-slider > ul.slick-dots li.slick-active button {
+  opacity: 1;
+  transform: scaleX(1.8);
+}
+.citySlider > .slick-slider > ul.slick-dots li.slick-active {
+  margin: 0 12px !important;
+}
+/* Pupular cities part css end */
+
+/* Blog part css start */
+
+.blogPart {
+  padding: 60px 0;
+  overflow: hidden;
+  background: #f3f3f3f5;
+}
+.blogItem {
+  transition: all .2s ease;
+  position: relative;
+  top: 0;
+}
+.blogItem:hover {
+  top: -5px;
+  box-shadow: 0px 8px 16px 0px #E0E0E0 !important;
+}
+.blogItem .blogImage .createdTime {
+  width: max-content;
+  background: white;
+  padding: 5px 9px;
+  border-radius: 7px;
+  position: relative;
+  top: -28px;
+  left: 20px;
+}
+.blogItem .blogImage .createdTime {
+  width: max-content;
+  background: white;
+  padding: 5px 9px;
+  border-radius: 7px;
+  position: relative;
+  top: -32px;
+  left: 18px;
+}
+
+.blogItem .blogImage .createdTime h5 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.blogItem .blogImage .createdTime h3 {
+  font-size: 24px;
+}
+.blogItem .blogText h2 {
+  font-size: 21px;
+  margin-top: -29px;
+  font-weight: bold;
+}
+
+.blogItem .blogText p {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+  margin-top: 13px;
+}
+.blogItem .blogText h2 {
+  font-size: 21px;
+  margin-top: -29px;
+  font-weight: bold;
+}
+
+.blogItem .blogText p {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+  margin-top: 13px;
+}
+
+.blogItem .blogBottomText .author .image {
+  margin-right: 7px;
+}
+.blogItem .blogBottomText .author .name h4 {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.blogItem .blogBottomText .author .name span {
+  font-size: 13px;
+  margin-right: 9px;
+}
+
+.blogItem .blogBottomText .author .name span i {
+  color: var(--colorPrimary);
+  opacity: .9;
+  margin-right: 2px;
+}
+.blogItem .blogBottomText .readMore button {
+  border: 2px solid var(--colorPrimary);
+  outline: none;
+  color: var(--colorPrimary);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 5px 13px;
+  transition: all .3s ease;
+  background: white;
+}
+
+.blogItem .blogBottomText .readMore button:hover {
+  background: var(--colorPrimary);
+  color: white;
+}
+/* Blog part css end */
+
+/* Our agents css start */
+
+.ourAgentsPart {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.singleAgent .image:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+}
+.singleAgent:hover .image:before {
+  transition: all .4s ease;
+  transform: scale(1);
+}
+
+.singleAgent .image .socialIcons {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.singleAgent .image .socialIcons ul {
+  display: none; 
+}
+.singleAgent:hover .image .socialIcons ul {
+  display: block;
+}
+.singleAgent .image .socialIcons ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 5px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  top: -20px;
+  visibility: hidden;
+}
+.singleAgent .image .socialIcons ul li a.facebook {
+  background: #1773EA;
+  
+}
+.singleAgent .image .socialIcons ul li a.twitter {
+  background: #00A7E7
+}
+.singleAgent .image .socialIcons ul li a.linkedin {
+  background: #006EAB
+}
+.singleAgent .image .socialIcons ul li a.envelope {
+  background: #AC2F20
+}
+.singleAgent:hover .image .socialIcons ul li a.facebook {
+  visibility: visible;
+  transition: all .3s ease;
+  top: 0;
+  transition-delay: .4s;
+}
+.singleAgent:hover .image .socialIcons ul li a.twitter {
+  visibility: visible;
+  transition: all .150s ease;
+  top: 0;
+  transition-delay: .6s;
+}
+.singleAgent:hover .image .socialIcons ul li a.linkedin {
+  visibility: visible;
+  transition: all .150s ease;
+  top: 0;
+  transition-delay: .8s;
+}
+.singleAgent:hover .image .socialIcons ul li a.envelope {
+  visibility: visible;
+  transition: all .150s ease;
+  top: 0;
+  transition-delay: 1s;
+}
+.singleAgent .info {
+  padding: 14px;
+}
+
+.singleAgent .info h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.singleAgent .info h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.agentSlider > .slick-slider > .slick-list > .slick-track > .slick-slide > div {
+  margin: 0 12px;
+}
+.agentSlider .slick-slider .slick-dots {
+  top: 4px;
+}
+.agentSlider .slick-slider .slick-dots li button {
+  border: 2px solid var(--colorDark) !important;
+}
+.agentSlider .slick-slider .slick-dots li.slick-active button {
+  background: var(--colorDark) !important;
+}
+/* Our agents css end */
